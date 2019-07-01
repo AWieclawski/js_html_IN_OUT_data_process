@@ -1,5 +1,7 @@
 body{
+background-color:#111111;
 font-family:Times, serif;
+padding:20px;
 }
 .containeer{
 margin-left:auto;
