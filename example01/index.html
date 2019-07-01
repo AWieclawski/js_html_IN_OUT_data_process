@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="keywords" conntennt="2019, VI, ee.09, 02">
+<title>Gas station</title>
+<link rel="stylesheet" href="style01.css">
+</head>
+<body>
+
+<div class="containeer">
+
+	<div class="tab">
+
+		<table>
+		
+		<thead>
+			<tr>
+				<th>Fuel name</th><th>Type number</th><th>Fuel price</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>Diesel</th><td>1</td><td id="diesel"></td>
+			</tr>
+
+			
+			<tr>
+				<th> Gasoline</th><td>2</td><td id="gas"></td>
+			</tr>
+		</tbody>
+		
+		</table>
+
+	</div>
+
+	<div class="calc">
+	
+		<label for="type">Number of fuel type: </label><br>
+		<input type="number" id="type"><br><br>
+
+		<label for="quantity">Quantity: </label><br>
+		<input type="number" id="quantity"><br><br>
+
+		<input type="button" value="Calculate" onclick="calculation()">
+		<hr>
+		<script src="calculation.js"></script>
+		<p id="statement"></p>
+		
+	</div>
+
+	<div class="eraser">
+	</div>
+	
+</div>
+
+</body>
+</html>
