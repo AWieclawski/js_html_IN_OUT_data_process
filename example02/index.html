@@ -15,37 +15,60 @@
 	</div>
 
 	<div class="main" id="list">
-		<h3>Hobby examples</h3>
+		<h3>Lis of parameters</h3>
 		<ul>
-			<li>music</li>
-			<li>tourism</li>
+		<li>Font
 			<ol>
-				<li>mountain</li>
-				<li>lakes</li>
-				<li>cycling</li>
+				<li class="deleted">family</li>
+				<li>size</li>
+				<li>style</li>
+				<li>weight</li>
 			</ol>
-			<li>books</li>
+		<li>Text
+			<ol>
+				<li>decoration</li>
+				<li>transform</li>
+				<li class="deleted">align</li>
+				<li class="deleted">shadow</li>
+			</ol>
+		<li>Color</li>
 		</ul>
 	</div>
 
 	<div class="main" id="formatter">
-		<h3>Text parameters</h3>
-		<label>Font size: <input type="number" id="size"> %</label>
-		<p>Font style:
+		<h3>Set up parameters</h3>
+		<p><label>Font size: <input type="number" id="size"> %; </label>
+		Font style:
 			<select id="style">
 				<option value="normal">Normal</option>
 				<option value="italic">Italic</option>
 				<option value="oblique">Oblique</option>
 			</select>
-		Font weight:
+		; Font weight:
 			<select id="weight">
 				<option value="normal">Normal</option>
 				<option value="bold">Bold</option>
 				<option value="900">900</option>
 			</select>
 		</p>
-		<p>Choose a color and press the button to enter all format parameters:</p> 
 		<p>
+		Text decoration:
+			<select id="decoration">
+				<option value="none">None</option>
+				<option value="underline">Underline</option>
+				<option value="upperline">Upperline</option>
+				<option value="line-through">Line through</option>
+			</select>
+		; Text transform:
+			<select id="transform">
+				<option value="none">None</option>
+				<option value="lowercase">Lowercase</option>
+				<option value="uppercase">Uppercase</option>
+				<option value="capitalize">Capitalize</option>
+			</select>
+		</p>
+
+		<p>Choose a color and press the button to use all parameters: 
 			<button type="submit" id="red" onclick="styleFormat('red')">Red</button>
 			<button type="submit" id="green" onclick="styleFormat('green')">Green</button>
 			<button type="submit" id="blue" onclick="styleFormat('blue')">Blue</button>
