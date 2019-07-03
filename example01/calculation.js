@@ -1,9 +1,12 @@
-var diesel = 4.1;
-var gas = 3.55;
+const gasType = 2;
+const gasPrice = 4.1;
+const dieselType = 1;
+const dieselPrice = 3.55;
 
-document.getElementById('diesel').innerHTML = diesel;
-document.getElementById('gas').innerHTML = gas;
-
+document.getElementById('dieselType').innerHTML = dieselType;
+document.getElementById('gasType').innerHTML = gasType;
+document.getElementById('dieselPrice').innerHTML = dieselPrice;
+document.getElementById('gasPrice').innerHTML = gasPrice;
 
 function calculation()
 {
@@ -14,6 +17,7 @@ function calculation()
 	var typeInt = parseInt(type);
 	var value = 0.0;
 	var price = 0.0;
+	var fuelName = '';
 	var info = '';
 
 	console.log('type: ',type,'pice: ',price, 'quanity: ',quantity);
@@ -22,12 +26,14 @@ function calculation()
 	{
 		switch(typeInt)
 		{
-			case 1:
-				price = gas;
+			case gasType:
+				price = gasPrice;
+				fuelName = 'gasoline';
 			break;
 
-			case 2:
-				price = diesel;
+			case dieselType:
+				price = dieselPrice;
+				fuelName = 'diesel';
 			break;
 			
 			default:
@@ -43,7 +49,7 @@ function calculation()
 	{
 		value = quantFloat * price;
 		console.log('value: ',value);
-		info = 'The cost of fuel purchase will be '+value.toFixed(2)+' pln'; 
+		info = 'The cost of fuel ('+fuelName+') purchase will be '+value.toFixed(2)+' pln'; 
 	}
 	document.getElementById('statement').innerHTML = info; 
 }
