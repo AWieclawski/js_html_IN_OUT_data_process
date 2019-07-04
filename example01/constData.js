@@ -1,5 +1,5 @@
-const gasType = 2;
-const gasPrice = 4.1;
-const dieselType = 1;
-const dieselPrice = 3.55;
+const catalogue = [
+['Diesel',1,3.55],
+['Gasoline',2,4.10]
+]
 

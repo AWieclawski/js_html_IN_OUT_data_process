@@ -1,8 +1,3 @@
-document.getElementById('dieselType').innerHTML = dieselType;
-document.getElementById('gasType').innerHTML = gasType;
-document.getElementById('dieselPrice').innerHTML = dieselPrice;
-document.getElementById('gasPrice').innerHTML = gasPrice;
-
 function calculation()
 {
 
@@ -11,30 +6,20 @@ function calculation()
 	var quantFloat = parseFloat(quantity);
 	var typeInt = parseInt(type);
 	var value = 0.0;
-	var price = 0.0;
+	var price = NaN;
 	var fuelName = '';
 	var info = '';
 
-	console.log('type: ',type,'pice: ',price, 'quanity: ',quantity);
-
-	if (quantFloat>0)
+	for (let i=0;i<catalogue.length;i++)
 	{
-		switch(typeInt)
+		if(parseInt(catalogue[i][1])==typeInt)
 		{
-			case gasType:
-				price = gasPrice;
-				fuelName = 'gasoline';
-			break;
-
-			case dieselType:
-				price = dieselPrice;
-				fuelName = 'diesel';
-			break;
-			
-			default:
-				price = NaN;
+			price=catalogue[i][2];
+			fuelName=catalogue[i][0];
 		}
 	}
+
+	console.log('type: ',type,'price: ',price, 'quanity: ',quantity);
 
 	if(isNaN(price))
 	{
@@ -42,8 +27,7 @@ function calculation()
 	}
 	else
 	{
-		value = quantFloat * price;
-		console.log('value: ',value);
+		value = quantFloat * parseFloat(price);
 		info = 'The cost of fuel ('+fuelName+') purchase will be '+value.toFixed(2)+' pln'; 
 	}
 	document.getElementById('statement').innerHTML = info; 
